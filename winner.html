@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Winner Page</title>
+    <style>
+      body {
+        background-color: #18b618;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+      }
+      .trophy {
+        width: 200px;
+        height: auto;
+      }
+      .message {
+        font-size: 48px;
+        font-weight: bold;
+        margin: 20px 0 10px;
+        text-align: center;
+      }
+      .sub-message {
+        font-size: 24px;
+        text-align: center;
+      }
+      .play-again-btn {
+        margin-top: 50px;
+        padding: 15px 30px;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: white;
+        color: green;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .play-again-btn:hover {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="trophyimg.webp" alt="Trophy" class="trophy" />
+    <div class="message">HURRAY!!</div>
+    <div class="sub-message">You won the game</div>
+    <button class="play-again-btn" onclick="resetScoresAndPlayAgain()">
+      Play Again
+    </button>
+
+    <script>
+      function resetScoresAndPlayAgain() {
+        // Reset scores in local storage
+        localStorage.setItem("playerScore", 0);
+        localStorage.setItem("computerScore", 0);
+
+        // Redirect back to the main game page
+        window.location.replace("index.html");
+      }
+    </script>
+  </body>
+</html>

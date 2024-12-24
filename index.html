@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="navcontainer">
+          <div class="gesures" style="display: flex; align-items: center">
+            <div
+              class="gesture"
+              style="text-align: left; position: relative; left: 7px"
+            >
+              <p><strong>ROCK</strong></p>
+              <br />
+              <p><strong>PAPER</strong></p>
+              <br />
+              <p><strong>SCISSORS</strong></p>
+            </div>
+          </div>
+
+          <div class="inner1">
+            <p>YOUR SCORE</p>
+            <br />
+            <strong class="score player-score">0</strong>
+          </div>
+
+          <div class="inner2">
+            <p>COMPUTERS SCORE</p>
+            <br />
+            <strong class="score computer-score">0</strong>
+          </div>
+        </div>
+      </nav>
+
+      <div class="logocontainer">
+        <div class="selectedchoice rock">
+          <img
+            src="./rock.png"
+            id="rock"
+            height="100"
+            width="100"
+            border-radius="50%"
+            class="choice"
+          />
+        </div>
+
+        <div class="selectedchoice paper">
+          <img
+            src="./paper.png"
+            id="paper"
+            height="100"
+            width="100"
+            class="choice"
+          />
+        </div>
+
+        <div class="selectedchoice scissor">
+          <img
+            src="./scissors.png"
+            id="scissors"
+            height="100"
+            width="100"
+            class="choice"
+          />
+        </div>
+      </div>
+
+      <!--  result-message, choices of player comp and result -->
+      <div class="result">
+        <span
+          id="player-choice"
+          style="position: relative; top: 40px; left: 200px; color: white"
+        ></span>
+        <span
+          id="result-message"
+          style="position: relative; top: 135px; left: 20px; color: white"
+        ></span>
+        <span
+          id="computer-choice"
+          style="position: relative; right: 200px; top: 40px; color: white"
+        ></span>
+      </div>
+
+      <div class="buttons">
+        <button id="next-btn" class="btn hidden">Next</button>
+        <button id="rules-btn" class="btn">Rules</button>
+      </div>
+
+      <div id="popup-rules" class="popup hidden">
+        <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h2 style="padding-bottom: 10px">How to Play</h2>
+          <ul style="position: relative; left: 7px">
+            <li>Rock beats Scissors</li>
+            <li>Scissors beat Paper</li>
+            <li>Paper beats Rock</li>
+            <li>Same choices result in a tie</li>
+          </ul>
+        </div>
+      </div>
+
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
